@@ -8,8 +8,7 @@ export const ProductCard = ({category, description, image, rating, title, price}
   // create the layout
   return (
     <MainContainer>
-      <p>Image here</p>
-      <Image src={image} width={250} height={250}/>
+      <Image src={image} width={200} height={200} alt={title}/>
       <p>{category}</p>
       <Description>{description}</Description>
       <PriceContainer>
