@@ -4,7 +4,7 @@ import { Product } from "@/app/types/Globaltypes";
 
 type ProductCardProps = Product;
 
-export const ProductCard = ({category, description, image, rating, title, price} : ProductCardProps) => {
+export const ProductCard = ({description, image, rating, title, price} : ProductCardProps) => {
 
   console.log('image inside product card', image);
   // define props - done
@@ -12,7 +12,7 @@ export const ProductCard = ({category, description, image, rating, title, price}
   return (
     <MainContainer>
       <Image src={image} width={200} height={200} alt={title}/>
-      <p>{category}</p>
+      <p>{title}</p>
       <Description>{description}</Description>
       <PriceContainer>
           <p>Price : $ {price}</p>

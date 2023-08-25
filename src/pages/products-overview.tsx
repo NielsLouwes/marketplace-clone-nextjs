@@ -2,6 +2,7 @@
 import { ProductCard } from "@/app/components/ProductCard/ProductCard";
 import { ProductData } from "@/app/types/Globaltypes";
 import { useEffect, useState } from "react";
+import { StyledContainer } from "./products-overview.styled";
 
 export default function ProductsOverview() {
   const [productData, setProductData] = useState<ProductData | null>(null);
@@ -27,7 +28,7 @@ export default function ProductsOverview() {
   // console.log("productData", productData);
 
   return (
-    <div>
+    <StyledContainer>
       {loading && <p>Loading...</p>}
       {productData?.map((product) => (
         <ProductCard
@@ -35,6 +36,6 @@ export default function ProductsOverview() {
           {...product}
         />
       ))}
-    </div>
+    </StyledContainer>
   );
 }
