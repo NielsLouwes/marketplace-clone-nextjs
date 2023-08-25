@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
   border: 1px solid red;
-  width: 250px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 5px 10px;
+  cursor: pointer;
 `
 
 export const Description = styled.p`

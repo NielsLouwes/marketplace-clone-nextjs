@@ -3,11 +3,13 @@ import { ProductCard } from "@/app/components/ProductCard/ProductCard";
 import { ProductData } from "@/app/types/Globaltypes";
 import { useEffect, useState } from "react";
 import { StyledContainer } from "./products-overview.styled";
+import Link from "next/link";
 
 export default function ProductsOverview() {
   const [productData, setProductData] = useState<ProductData | null>(null);
   const [loading, setLoading] = useState(false);
 
+  // move into own hook
   const fetchProducts = async () => {
     setLoading(true);
     try {
@@ -31,10 +33,9 @@ export default function ProductsOverview() {
     <StyledContainer>
       {loading && <p>Loading...</p>}
       {productData?.map((product) => (
-        <ProductCard
-        key={product.id}
-          {...product}
-        />
+        <Link href={`/products/${product.id}`} key={product.id}>
+          <ProductCard {...product} />
+        </Link>
       ))}
     </StyledContainer>
   );
