@@ -3,6 +3,7 @@ import {
   Description,
   MainContainer,
   PriceContainer,
+  Text,
 } from "./ProductCard.styled";
 import { Product } from "@/app/types/Globaltypes";
 
@@ -18,11 +19,11 @@ export const ProductCard = ({
   return (
     <MainContainer>
       <Image src={image} width={200} height={200} alt={title} />
-      <p>{title}</p>
+      <Text>{title}</Text>
       {/* <Description>{description}</Description> */}
       <PriceContainer>
-        <p>Price : $ {price}</p>
-        <p>Rating: {rating.rate}</p>
+        <Text>Price : $ {price}</Text>
+        <Text>Rating: {rating.rate}</Text>
       </PriceContainer>
     </MainContainer>
   );

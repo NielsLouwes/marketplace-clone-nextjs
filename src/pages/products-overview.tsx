@@ -2,7 +2,7 @@
 import { ProductCard } from "@/app/components/ProductCard/ProductCard";
 import { ProductData } from "@/app/types/Globaltypes";
 import { useEffect, useState } from "react";
-import { StyledContainer } from "./products-overview.styled";
+import { ProductLink, StyledContainer } from "./products-overview.styled";
 import Link from "next/link";
 
 export default function ProductsOverview() {
@@ -33,9 +33,9 @@ export default function ProductsOverview() {
     <StyledContainer>
       {loading && <p>Loading...</p>}
       {productData?.map((product) => (
-        <Link href={`/products/${product.id}`} key={product.id}>
+        <ProductLink href={`/products/${product.id}`} key={product.id}>
           <ProductCard {...product} />
-        </Link>
+        </ProductLink>
       ))}
     </StyledContainer>
   );

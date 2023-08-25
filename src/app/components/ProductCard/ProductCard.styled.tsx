@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
   border: 1px solid red;
   width: 200px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,5 +18,10 @@ export const Description = styled.p`
 export const PriceContainer = styled.div`
   display: flex;
   justify-content: space-between
+`
+
+export const Text = styled.p`
+color: black;
+text-decoration: none;
 `
 
