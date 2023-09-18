@@ -3,7 +3,6 @@ import { ProductCard } from "@/app/components/ProductCard/ProductCard";
 import { ProductData } from "@/app/types/Globaltypes";
 import { useEffect, useState } from "react";
 import { ProductLink, StyledContainer } from "./products-overview.styled";
-import Link from "next/link";
 
 export default function ProductsOverview() {
   const [productData, setProductData] = useState<ProductData | null>(null);

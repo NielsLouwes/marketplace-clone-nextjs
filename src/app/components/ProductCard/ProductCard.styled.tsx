@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  border: 1px solid red;
   width: 200px;
   height: 350px;
   display: flex;
@@ -9,6 +8,7 @@ export const MainContainer = styled.div`
   justify-content: space-between;
   padding: 5px 10px;
   cursor: pointer;
+  background: white;
 `
 
 export const Description = styled.p`

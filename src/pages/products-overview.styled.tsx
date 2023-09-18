@@ -5,6 +5,9 @@ export const StyledContainer = styled.div`
   flex-wrap: wrap;
   margin-top: 25px;
   gap: 10px;
+  background:  #2897FF;
+  width: 700px;
+  padding: 10px;
 `
 
 export const ProductLink = styled.a`
